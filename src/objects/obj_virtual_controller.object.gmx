@@ -29,8 +29,14 @@
 instance_create(x,y,obj_v_left)
 instance_create(x,y,obj_v_right)
 instance_create(x,y,obj_v_up)
-instance_create(x,y,obj_v_pause)
-if instance_exists(obj_timer)=false instance_create(x,y,obj_timer)
+
+if instance_exists(obj_timer)=false {
+    instance_create(x,y,obj_timer)
+    }
+
+if !instance_exists(obj_v_pause){
+    instance_create(x,y,obj_v_pause)
+    }
 </string>
           </argument>
         </arguments>
@@ -80,9 +86,12 @@ with obj_v_up instance_destroy()
           <argument>
             <kind>1</kind>
             <string>instance_create(x,y,obj_score)
-instance_create(x,y,obj_v_pause)
 instance_create(x,y,obj_lives)
 instance_create(x,y,obj_light)
+
+if !instance_exists(obj_v_pause){
+    instance_create(x,y,obj_v_pause)
+}
 </string>
           </argument>
         </arguments>

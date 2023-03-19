@@ -36,7 +36,7 @@ img_5=noone
 x=view_xport[0]+400
 y=view_yport[0]+240
 //create virtual button backspace
-global.key_textbox=virtual_key_add(x-320,y-96,640,192,vk_backspace)
+global.key_textbox=virtual_key_add(x-320,y-96,640,192,vk_space)
 </string>
           </argument>
         </arguments>
@@ -105,7 +105,7 @@ global.key_textbox=virtual_key_add(x-320,y-96,640,192,vk_backspace)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_backspace) then alarm[0]=1
+            <string>if keyboard_check(vk_space) then alarm[0]=1
 </string>
           </argument>
         </arguments>

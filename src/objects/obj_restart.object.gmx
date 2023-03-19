@@ -82,7 +82,8 @@ if keyboard_check_pressed(ord('R')) then{
 if v_selected=1{
 room_restart()}
 // set other selections to false
-else{v_selected=1
+else{
+v_selected=1
 obj_title.v_selected=0
 obj_resume.v_selected=0}}//set selection to true
 

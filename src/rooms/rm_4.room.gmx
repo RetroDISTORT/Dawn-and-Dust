@@ -194,7 +194,6 @@ obj_var_saver.v_level=4</code>
     <instance objName="obj_fake_block" x="416" y="256" name="inst_AB50B4E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fake_block" x="416" y="224" name="inst_3DC0F987" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fake_block" x="416" y="192" name="inst_3EDC8C38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_int_hor" x="480" y="288" name="inst_065EB911" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fake_block" x="96" y="224" name="inst_9F6F7163" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fake_block" x="64" y="224" name="inst_A094B442" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_fake_block" x="128" y="224" name="inst_0B13EC25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
