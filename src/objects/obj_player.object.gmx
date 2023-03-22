@@ -99,35 +99,37 @@ instance_create(x,y,obj_death_1)
             <kind>1</kind>
             <string>//stop if text box exists
 if instance_exists(obj_textbox)=false and instance_exists(obj_pause_menu)=false then{
-//down
-if keyboard_check_pressed(vk_down) and place_snapped(32,32) then{
-if v_animation=0 then{
-image_angle=270
-if position_meeting(x,y+32,obj_mainblock) = false then{
-instance_create(x,y,obj_track) y=y+32}
-else{
-if instance_exists(obj_movable) then{
-if instance_nearest(x,y+32,obj_movable).y=y+32 then if instance_nearest(x,y+32,obj_movable).x=x then if collision_rectangle(x+15,y+49,x-16,y+79,obj_mainblock,1,1) or collision_rectangle(x+15,y+49,x-16,y+79,obj_int_vert,1,1) or collision_rectangle(x+15,y+49,x-16,y+79,obj_int_hor,1,1) then{} else{
-with instance_nearest(x,y+32,obj_movable){y=y+32 visible=0}
-sprite_index=spr_push_square image_speed=.5 v_animation=1}}}}}
-//right
-if keyboard_check_pressed(vk_right) and place_snapped(32,32) then{
-if v_animation=0{
-image_angle=0
-if position_meeting(x+32,y,obj_mainblock) = false  then{
-instance_create(x,y,obj_track) x=x+32}
-else{
-if instance_exists(obj_movable) then{
-if instance_nearest(x+32,y,obj_movable).y=y then if instance_nearest(x+32,y,obj_movable).x=x+32 then if collision_rectangle(x+48,y-16,x+79,y+15,obj_mainblock,1,1) or collision_rectangle(x+48,y-16,x+79,y+15,obj_int_vert,1,1) or collision_rectangle(x+48,y-16,x+79,y+15,obj_int_hor,1,1) then{} else{
-with instance_nearest(x+32,y,obj_movable){x=x+32 visible=0}
-//check if instance was moved
-sprite_index=spr_push_square image_speed=.5 v_animation=1}}}}}
-//up
-if keyboard_check_pressed(vk_up) and place_snapped(32,32) then{
-if v_animation=0{
-image_angle=90
-if position_meeting(x,y-32,obj_mainblock) = false  then{
-instance_create(x,y,obj_track) y=y-32}
+   //down
+   if keyboard_check_pressed(vk_down) and place_snapped(32,32) then{
+   if v_animation=0 then{
+      image_angle=270
+      if position_meeting(x,y+32,obj_mainblock) = false then{
+         instance_create(x,y,obj_track) y=y+32}
+      else{
+           if instance_exists(obj_movable) then{
+              if instance_nearest(x,y+32,obj_movable).y=y+32 then if instance_nearest(x,y+32,obj_movable).x=x then if collision_rectangle(x+15,y+49,x-16,y+79,obj_mainblock,1,1) or collision_rectangle(x+15,y+49,x-16,y+79,obj_int_vert,1,1) or collision_rectangle(x+15,y+49,x-16,y+79,obj_int_hor,1,1) then{} else{
+                 with instance_nearest(x,y+32,obj_movable){y=y+32 visible=0}
+              sprite_index=spr_push_square image_speed=.5 v_animation=1}}}}}
+              
+   //right
+   if keyboard_check_pressed(vk_right) and place_snapped(32,32) then{
+      if v_animation=0{
+         image_angle=0
+         if position_meeting(x+32,y,obj_mainblock) = false  then{
+            instance_create(x,y,obj_track) x=x+32}
+         else{
+           if instance_exists(obj_movable) then{
+              if instance_nearest(x+32,y,obj_movable).y=y then if instance_nearest(x+32,y,obj_movable).x=x+32 then if collision_rectangle(x+48,y-16,x+79,y+15,obj_mainblock,1,1) or collision_rectangle(x+48,y-16,x+79,y+15,obj_int_vert,1,1) or collision_rectangle(x+48,y-16,x+79,y+15,obj_int_hor,1,1) then{} else{
+                 with instance_nearest(x+32,y,obj_movable){x=x+32 visible=0}
+                 //check if instance was moved
+              sprite_index=spr_push_square image_speed=.5 v_animation=1}}}}}
+
+    //up
+    if keyboard_check_pressed(vk_up) and place_snapped(32,32) then{
+   if v_animation=0{
+   image_angle=90
+   if position_meeting(x,y-32,obj_mainblock) = false  then{
+   instance_create(x,y,obj_track) y=y-32}
 else{
 if instance_exists(obj_movable) then{
 if instance_nearest(x,y-32,obj_movable).y=y-32 then if instance_nearest(x,y-32,obj_movable).x=x then if collision_rectangle(x+15,y-49,x-16,y-78,obj_mainblock,1,1) or collision_rectangle(x+15,y-49,x-16,y-78,obj_int_vert,1,1) or collision_rectangle(x+15,y-49,x-16,y-78,obj_int_hor,1,1) then{} else{
