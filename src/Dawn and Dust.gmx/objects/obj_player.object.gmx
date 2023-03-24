@@ -91,11 +91,11 @@ for(i = 0; i&lt;20;i++)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>collision_top        = collision_rectangle(x-(collision_width/2),   y-(collision_height/2), x+(collision_width/2),   y-(3*collision_height/2), obj_mainblock, 0, 1);
-collision_bottom     = collision_rectangle(x-(collision_width/2),   y+(collision_height/2), x+(collision_width/2),   y+(3*collision_height/2), obj_mainblock, 0, 1);
-collision_left       = collision_rectangle(x-(3*collision_width/2), y+(collision_height/2), x-(collision_width/2),   y-(collision_height/2),   obj_mainblock, 0, 1);
-collision_right      = collision_rectangle(x+(collision_width/2),   y+(collision_height/2), x+(3*collision_width/2), y-(collision_height/2),   obj_mainblock, 0, 1);
-collision_center     = collision_rectangle(x+(collision_width/2),   y+(collision_height/2), x+(collision_width/2),   y-(collision_height/2),   obj_mainblock, 0, 1);
+            <string>collision_top        = collision_rectangle(x-(collision_width/2),   y-(collision_height/2), x+(collision_width/2),   y-(3*collision_height/2), obj_mainblock,  0, 1);
+collision_bottom     = collision_rectangle(x-(collision_width/2),   y+(collision_height/2), x+(collision_width/2),   y+(3*collision_height/2), obj_mainblock,  0, 1);
+collision_left       = collision_rectangle(x-(3*collision_width/2), y+(collision_height/2), x-(collision_width/2),   y-(collision_height/2),   obj_mainblock,  0, 1);
+collision_right      = collision_rectangle(x+(collision_width/2),   y+(collision_height/2), x+(3*collision_width/2), y-(collision_height/2),   obj_mainblock,  0, 1);
+collision_center     = collision_rectangle(x+(collision_width/2),   y+(collision_height/2), x+(collision_width/2),   y-(collision_height/2),   obj_mainblock,  0, 1);
 collision_fake_block = collision_rectangle(x+(collision_width/2),   y+(collision_height/2), x-(collision_width/2),   y-(collision_height/2),   obj_fake_block, 0, 1);
 
 //stop if text box exists
@@ -103,10 +103,10 @@ if (instance_exists(obj_textbox)=false &amp;&amp; instance_exists(obj_pause_menu
     move_x = 0;
     move_y = 0;
     
-    if keyboard_check_pressed(vk_right) { move_x =  32; image_angle = 0;   collision = collision_right;  }
-    if keyboard_check_pressed(vk_up)    { move_y = -32; image_angle = 90;  collision = collision_top;    }
-    if keyboard_check_pressed(vk_left)  { move_x = -32; image_angle = 180; collision = collision_left;   }
-    if keyboard_check_pressed(vk_down)  { move_y =  32; image_angle = 270; collision = collision_bottom; }
+    if      keyboard_check_pressed(vk_right) { move_x =  32; image_angle = 0;   collision = collision_right;  }
+    else if keyboard_check_pressed(vk_up)    { move_y = -32; image_angle = 90;  collision = collision_top;    }
+    else if keyboard_check_pressed(vk_left)  { move_x = -32; image_angle = 180; collision = collision_left;   }
+    else if keyboard_check_pressed(vk_down)  { move_y =  32; image_angle = 270; collision = collision_bottom; }
     
     if (move_x + move_y != 0){
         if ((collision == noone) /*|| collsion_bottom.object_index != obj_mainblock*/){ //no collision
@@ -331,25 +331,34 @@ audio_listener_position(x,y,0)
 ini_open("sys.ini")
 ini_write_real("room_maxcoin",room_get_name(room),obj_score.var_maxcoin)
 ini_close()
+
 //check conditions
 v_check=0
 if obj_score.CurrentScore&gt;obj_score.score_rec then{
-ini_open("sys.ini")
-if room!=room_intro and room!=room_select{
-ini_write_real("room_coins",room_get_name(room),obj_score.CurrentScore)
-ini_write_real("room_min",room_get_name(room),obj_timer.v_min)
-ini_write_real("room_hour",room_get_name(room),obj_timer.v_hour)}
-ini_close()
-v_check=1}
-if v_check!=1{
-if obj_score.CurrentScore=obj_score.score_rec then{ 
-if ((v_hour_rec*60)+v_min_rec)&lt;((v_hour*60)+v_min) then{
-if room!=room_intro and room!=room_select{
-ini_open("sys.ini")
-ini_write_real("room_coins",room_get_name(room),obj_score.CurrentScore)
-ini_write_real("room_min",room_get_name(room),obj_timer.v_min)
-ini_write_real("room_hour",room_get_name(room),obj_timer.v_hour)
-ini_close()}}}}
+   ini_open("sys.ini")
+   if room!=room_intro and room!=room_select{
+      ini_write_real("room_coins", room_get_name(room), obj_score.CurrentScore)
+      ini_write_real("room_min",   room_get_name(room), obj_timer.minute)
+      ini_write_real("room_hour",  room_get_name(room), obj_timer.hour)
+   }
+   ini_close()
+   v_check=1
+}
+
+if (v_check!=1){
+   if obj_score.CurrentScore=obj_score.score_rec then{ 
+      if ((hour_record*60)+minute_record)&lt;((hour*60)+minute) then{
+         if room!=room_intro and room!=room_select{
+            ini_open("sys.ini")
+            ini_write_real("room_coins",room_get_name(room),obj_score.CurrentScore)
+            ini_write_real("room_min",room_get_name(room),obj_timer.minute)
+            ini_write_real("room_hour",room_get_name(room),obj_timer.hour)
+            ini_close()
+         }
+      }
+   }
+}
+
 instance_create(x,y,obj_stats)
 </string>
           </argument>
@@ -424,7 +433,7 @@ with obj_movable{visible=1}
             <kind>1</kind>
             <string>draw_set_alpha(1)
 draw_self()
-draw_set_alpha((obj_timer.v_hour*60+obj_timer.v_min)/720)
+draw_set_alpha((obj_timer.hour*60+obj_timer.minute)/720)
 draw_sprite(spr_glow,0,x,y)
 draw_set_alpha(1)
 </string>

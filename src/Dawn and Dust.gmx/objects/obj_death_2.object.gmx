@@ -151,14 +151,19 @@ type=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if v_return=0 then {image_alpha-=v_speed
-if obj_var_saver.v_lives&lt;0 then
-if image_alpha&lt;0 then instance_destroy()}
-if v_return=1 then{ direction=point_direction(x,y,init_x,init_y)
-image_alpha+=v_speed
-if point_distance(init_x,init_y,instance_furthest(init_x,init_y,obj_death_1).x,instance_furthest(init_x,init_y,obj_death_1).y)&gt;15
-if instance_number(obj_death_2)=1 then{ 
-if type=hor {instance_create(init_x,init_y,obj_int_hor)}}
+            <string>if (v_return=0){
+   image_alpha-=v_speed
+   if (obj_var_saver.v_lives&lt;0)
+      if (image_alpha&lt;0) instance_destroy()
+}
+
+if (v_return=1){ 
+   direction=point_direction(x,y,init_x,init_y)
+   image_alpha+=v_speed
+   if (point_distance(init_x,init_y,instance_furthest(init_x,init_y,obj_death_1).x,instance_furthest(init_x,init_y,obj_death_1).y)&gt;15)
+      if (instance_number(obj_death_2) == 1) then{ 
+         if (type=hor) instance_create(init_x,init_y,obj_int_hor)
+      }
 }
 </string>
           </argument>

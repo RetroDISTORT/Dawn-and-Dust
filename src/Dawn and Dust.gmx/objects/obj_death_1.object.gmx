@@ -125,7 +125,7 @@ alarm[1]=60
           <argument>
             <kind>1</kind>
             <string>if obj_var_saver.v_lives&gt;0{v_return=1}
-if (obj_timer.v_hour=0 &amp;&amp; obj_timer.v_min=0) then{ v_return=0 room_restart()}
+if (obj_timer.hour=0 &amp;&amp; obj_timer.minute=0) then{ v_return=0 room_restart()}
 </string>
           </argument>
         </arguments>

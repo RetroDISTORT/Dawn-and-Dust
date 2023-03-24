@@ -76,17 +76,16 @@
       <sprite>sprites\spr_dawn_and_dust</sprite>
       <sprite>sprites\spr_start_game</sprite>
       <sprite>sprites\spr_textbox</sprite>
+      <sprite>sprites\spr_pause_menu</sprite>
+      <sprite>sprites\spr_sun_moon</sprite>
     </sprites>
     <sprite>sprites\sprite7</sprite>
     <sprite>sprites\spr_hint</sprite>
     <sprite>sprites\sprite15</sprite>
     <sprite>sprites\sprite24</sprite>
     <sprite>sprites\spr_cannon</sprite>
-    <sprite>sprites\spr_pause_menu</sprite>
     <sprite>sprites\spr_logo_RD</sprite>
     <sprite>sprites\spr_floating_text</sprite>
-    <sprite>sprites\spr_time_sun</sprite>
-    <sprite>sprites\spr_time_moon</sprite>
     <sprite>sprites\spr_glow</sprite>
     <sprite>sprites\spr_sparkle</sprite>
     <sprite>sprites\sprite48</sprite>
@@ -99,6 +98,7 @@
     <sprite>sprites\spr_r</sprite>
     <sprite>sprites\spr_stats</sprite>
     <sprite>sprites\spr_light_end</sprite>
+    <sprite>sprites\sprite57</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -124,7 +124,7 @@
     <objects name="blocks">
       <object>objects\obj_obstacle</object>
       <object>objects\obj_mainblock</object>
-      <object>objects\object27</object>
+      <object>objects\obj_block</object>
       <object>objects\obj_fake_block</object>
       <object>objects\obj_hole</object>
       <object>objects\obj_movable</object>
@@ -154,7 +154,7 @@
       <object>objects\object9</object>
       <object>objects\obj_checkpoint</object>
     </objects>
-    <objects name="Menu">
+    <objects name="menu">
       <object>objects\obj_dawn_and_dust</object>
       <object>objects\obj_startgame</object>
       <object>objects\obj_quit</object>
@@ -193,6 +193,9 @@
     <objects name="control">
       <object>objects\obj_virtual_controller</object>
       <object>objects\obj_var_saver</object>
+    </objects>
+    <objects name="keys and locks">
+      <object>objects\lock</object>
     </objects>
     <object>objects\obj_airblower_R</object>
     <object>objects\obj_button_1</object>

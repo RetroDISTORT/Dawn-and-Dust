@@ -115,7 +115,7 @@ x=view_xport[0]+400
 y=view_yport[0]+240
 draw_sprite(spr_stats,0,x,y)
 draw_text(x,y-64,"Time:")
-draw_text(x,y-46,string(obj_timer.v_hour)+":"+string(obj_timer.v_min))
+draw_text(x,y-46,string(obj_timer.hour)+":"+string(obj_timer.minute))
 draw_text(x,y-10,"Coins:")
 //draw_text(x,y+10,string(obj_score.CurrentScore)+"/"+string(obj_score.var_maxcoin))
 draw_text(x-75,y+48,"Restart")
