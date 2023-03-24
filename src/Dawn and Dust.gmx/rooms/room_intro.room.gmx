@@ -10,9 +10,7 @@
   <persistent>0</persistent>
   <colour>16777215</colour>
   <showcolour>-1</showcolour>
-  <code>if instance_exists(obj_var_saver)=false instance_create(x,y,obj_var_saver)
-
-window_set_fullscreen(true)</code>
+  <code>if instance_exists(obj_var_saver)=false instance_create(x,y,obj_var_saver)</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

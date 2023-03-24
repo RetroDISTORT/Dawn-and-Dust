@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_angle=0
 image_alpha=obj_var_saver.v_alpha
-alarm[0]=1
+alarm[0]=2
 </string>
           </argument>
         </arguments>

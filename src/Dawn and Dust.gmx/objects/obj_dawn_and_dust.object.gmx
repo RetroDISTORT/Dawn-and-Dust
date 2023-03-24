@@ -54,7 +54,7 @@ display_set_gui_size(800,480);
 draw_set_font(font_version)
 draw_set_color(c_white)
 draw_set_halign(fa_left)
-draw_text(630,459,"Version: Beta Test 0.3.1")
+draw_text(630,459,"Version: Beta Test 0.3.2")
 </string>
           </argument>
         </arguments>

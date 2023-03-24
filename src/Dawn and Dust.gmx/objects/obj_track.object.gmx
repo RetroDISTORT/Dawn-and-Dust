@@ -11,37 +11,9 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>541</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sprite_set</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_track</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>.5</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -53,11 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
+            <string>image_speed = .5
+image_alpha = 1
+</string>
           </argument>
         </arguments>
       </action>
@@ -79,10 +49,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if image_alpha =0 then instance_destroy()
-image_alpha -=.05
-image_xscale-=.045
-image_yscale=image_xscale
+            <string>image_alpha  -= .05
+image_xscale -= .045
+image_yscale  = image_xscale
+
+if (image_alpha &lt;= 0) instance_destroy();
 </string>
           </argument>
         </arguments>

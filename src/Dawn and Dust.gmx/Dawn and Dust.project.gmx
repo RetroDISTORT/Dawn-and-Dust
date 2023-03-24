@@ -208,7 +208,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\room_intro</room>
-    <room>rooms\rm_9</room>
     <room>rooms\room_select</room>
     <rooms name="level_pack_1">
       <room>rooms\rm_1</room>
@@ -222,6 +221,7 @@
       <room>rooms\rm_99</room>
     </rooms>
     <room>rooms\room_base</room>
+    <room>rooms\rm_9</room>
     <rooms name="Tutorial">
       <room>rooms\room_tutorial_1</room>
     </rooms>

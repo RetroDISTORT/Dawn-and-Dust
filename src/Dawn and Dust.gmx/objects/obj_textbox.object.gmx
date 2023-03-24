@@ -105,7 +105,7 @@ global.key_textbox=virtual_key_add(x-320,y-96,640,192,vk_backspace)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_backspace) then alarm[0]=1
+            <string>if keyboard_check(vk_backspace) instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -134,18 +134,26 @@ draw_set_halign(fa_center)
 draw_set_valign(fa_top)
 x=view_xport[0]+400
 y=view_yport[0]+240
+
+//draw_roundrect_colour_ext(x - 50, y - 50, x + 50, y + 50, 5, 5, 55555511, c_white, 0);
+
 draw_sprite(spr_textbox,0,x,y)
 draw_text_ext(x,y-86,txt_hint,32,640)
-if img_1!=noone then
-draw_sprite(img_1,-1,x-213,y+55)
-if img_2!=noone then
-draw_sprite(img_2,-1,x-106,y+55)
-if img_3!=noone then
-draw_sprite(img_3,-1,x,y+55)
-if img_4!=noone then
-draw_sprite(img_4,-1,x+106,y+55)
-if img_5!=noone then
-draw_sprite(img_5,-1,x+213,y+55)
+
+if (img_1!=noone)
+    draw_sprite(img_1,-1,x-213,y+55)
+    
+if (img_2!=noone) then
+    draw_sprite(img_2,-1,x-106,y+55)
+    
+if (img_3!=noone) then
+    draw_sprite(img_3,-1,x,y+55)
+    
+if (img_4!=noone) then
+    draw_sprite(img_4,-1,x+106,y+55)
+    
+if (img_5!=noone) then
+    draw_sprite(img_5,-1,x+213,y+55)
 </string>
           </argument>
         </arguments>
