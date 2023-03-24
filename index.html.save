@@ -81,9 +81,5 @@
         <!-- Run the game code -->
         <script type="text/javascript" src="html5game/Dawn and Dust.js?IGOYB=186000028"></script>
         <script>window.onload = GameMaker_Init;</script>
-	<script>
-		var gameFrame = document.getElementById("gm4html_div_id");
-		gameFrame.requestFullscreen();
-	</script>
     </body>
 </html>
