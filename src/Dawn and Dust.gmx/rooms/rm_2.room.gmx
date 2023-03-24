@@ -14,8 +14,7 @@
 instance_create(x,y,obj_virtual_controller)
 //text &amp; images for hint 1
 if instance_exists(obj_hint_1){
-obj_hint_1.txt_hint="That over there is a movable block. These can be pushed but not pulled.
-Move it out of your way!"
+obj_hint_1.txt_hint="That over there is a movable block. Push it out of your way!"
 obj_hint_1.img_1=(noone)
 obj_hint_1.img_2=(noone)
 obj_hint_1.img_3=(spr_act_movable)
@@ -24,9 +23,9 @@ obj_hint_1.img_5=(noone)
 }
 //text &amp; images for hint 2
 if instance_exists(obj_hint_2){
-obj_hint_2.txt_hint="That over ther is a sun plant, is stores solar energy. If you touch it it can burn you. 
-But you can use the movable blocks to remove them.
-One more thing! To zoom in and out, just tap yourself."
+obj_hint_2.txt_hint="That over ther is a sun plant. If you touch it will can burn you. 
+Use that block to remove them.
+One more thing! Tap on yourself to zoom in and out."
 obj_hint_2.img_1=(noone)
 obj_hint_2.img_2=(noone)
 obj_hint_2.img_3=(noone)
@@ -35,7 +34,7 @@ obj_hint_2.img_5=(noone)
 }
 if instance_exists(obj_hint_3){
 //text &amp; images for hint 3
-obj_hint_3.txt_hint="Coins are used to buy stuff. You should collect them all."
+obj_hint_3.txt_hint="Coins? I would pick them up. They might be useful later"
 obj_hint_3.img_1=(noone)
 obj_hint_3.img_2=(noone)
 obj_hint_3.img_3=(spr_coin)

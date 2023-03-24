@@ -15,7 +15,7 @@ instance_create(x,y,obj_virtual_controller)
 //text &amp; images for hint 1
 if instance_exists(obj_hint_1){
 obj_hint_1.txt_hint="Stop right there!!!!
-Does are dust sweepers keep your distance. These aren’t intelligent, they will not follow you, but they move faster if you are close enough."
+Those over there are not your friends. Keep your distance. These aren’t very intelligent. But if you get too close, it might turn around and attack."
 obj_hint_1.img_1=(noone)
 obj_hint_1.img_2=(spr_enemy_normal)
 obj_hint_1.img_3=(noone)
@@ -24,10 +24,10 @@ obj_hint_1.img_5=(noone)
 }
 //text &amp; images for hint 2
 if instance_exists(obj_hint_2){
-obj_hint_2.txt_hint="And here you can see that the blocks are helpful again. Dust sweepers can’t see you if you’re out of sight. "
+obj_hint_2.txt_hint="And here you can see that these movable blocks are helpful again. Block their path to see what happens. "
 obj_hint_2.img_1=(noone)
 obj_hint_2.img_2=(noone)
-obj_hint_2.img_3=(noone)
+obj_hint_2.img_3=(spr_act_movable)
 obj_hint_2.img_4=(noone)
 obj_hint_2.img_5=(noone)
 }

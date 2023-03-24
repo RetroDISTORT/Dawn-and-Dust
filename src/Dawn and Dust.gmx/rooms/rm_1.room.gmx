@@ -14,9 +14,9 @@
 instance_create(x,y,obj_virtual_controller)
 //text &amp; images for hint 1
 if instance_exists(obj_hint_1){
-obj_hint_1.txt_hint="Welcome, you may ask where we are. Well don’t worry it will all be explained soon.
-Now run, you must leave this open area before dawn. Our bodies aren’t made for supporting sunlight.
-Use the moving buttons at the bottom right of the screen to move."
+obj_hint_1.txt_hint="Hey you! You need to get out of here now! This place is not safe.
+You must leave this open area before dawn. Keep an eye on timer, it's on the top left.
+To move use the up, down, left, and right buttons on your keyboard. You can also use the touch controls on the bottom right."
 obj_hint_1.img_1=(noone)
 obj_hint_1.img_2=(noone)
 obj_hint_1.img_3=(noone)
@@ -25,7 +25,7 @@ obj_hint_1.img_5=(noone)
 }
 //text &amp; images for hint 2
 if instance_exists(obj_hint_2){
-obj_hint_2.txt_hint="That over there is an artificially lighten cave.
+obj_hint_2.txt_hint="That seems to be the exit.
 Get there before de sun comes up!"
 obj_hint_2.img_1=(noone)
 obj_hint_2.img_2=(noone)
