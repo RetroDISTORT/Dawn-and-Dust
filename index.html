@@ -77,10 +77,11 @@
     <body>
 	<script type="text/javascript">
                 function fullScreen(){
-                        document.getElementById("gm4html5_div_id").requestFullscreen();
+                        document.querySelector("body").requestFullscreen();
+			document.getElementById("fullScreenButton").style.visibility = "hidden";
                 }
         </script>
-        <button onclick="fullScreen();">Full Screen Mode</button>
+        <button id="fullScreenButton" onclick="fullScreen();">Full Screen Mode</button>
 
         <div class="gm4html5_div_class" id="gm4html5_div_id">
             <!-- Create the canvas element the game draws to -->
