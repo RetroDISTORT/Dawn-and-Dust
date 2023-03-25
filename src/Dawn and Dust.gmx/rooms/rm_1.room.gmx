@@ -16,7 +16,7 @@ instance_create(x,y,obj_virtual_controller)
 if instance_exists(obj_hint_1){
 obj_hint_1.txt_hint="Hey you! You need to get out of here now! This place is not safe.
 You must leave this open area before dawn. Keep an eye on timer, it's on the top left.
-To move use the up, down, left, and right buttons on your keyboard. You can also use the touch controls on the bottom right."
+Move using the up, down, left, and right buttons on your keyboard. You can also use the touch controls on the bottom right."
 obj_hint_1.img_1=(noone)
 obj_hint_1.img_2=(noone)
 obj_hint_1.img_3=(noone)
